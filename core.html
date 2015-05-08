@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Scholastic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript">
+    (function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+    window.clientName = 'Scholastic';
+
+     ga('create', 'UA-53428138-1', 'auto');
+     ga('send', 'pageview', {'prospect': clientName});
+
+  </script>
+</head>
+
+<body>
+
+  <div class="livefyre-wrapper">
+    <nav>
+        <ul>
+            <li><a href="core.html">Comments</a></li>
+            <li><a href="curate.html">Curate</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <div id="livefyre-app-custom-1418068090130"></div>
+
+    <!--Load Enterprise Profiles script -->
+    <script src="https://client-demo-accounts.ep.livefyre.com/media/Y2xpZW50LWRlbW8tYWNjb3VudHMuZXAubGl2ZWZ5cmUuY29t/javascripts/customprofiles.js"></script>
+
+    <!-- Load Lifefyre Base Script -->
+    <script src="//cdn.livefyre.com/Livefyre.js"></script>
+
+    <!-- Instantiate Comment Stream -->
+    <script type="text/javascript">
+      (function() {
+
+        Livefyre.require(['fyre.conv#3', 'auth', 'lfep-auth-delegate#0'], function (Conv, auth, LFEPAuthDelegate) {
+
+          var networkConfig, convConfig, authDelegate;
+
+          networkConfig = {
+            network: "client-demo-accounts.fyre.co"
+          };
+
+          convConfig = {
+            app: 'main',
+            siteId: '370355',
+            articleId: 'custom-1421869669473',
+            el: 'livefyre-app-custom-1418068090130'
+          };
+
+            // create an LFEP Auth Delegate
+          authDelegate = new LFEPAuthDelegate({
+            engageOpts: {
+              app: 'client-demo-accounts.auth.fyre.co'
+            }
+          });
+
+          // Delegate AppKit Auth actions to LFEP and put them in the Network object
+          networkConfig.authDelegate = auth.delegate(authDelegate);
+
+          // Construct Comments Widget
+          new Conv(networkConfig, [convConfig], function (commentsWidget) {
+            commentsWidget.on('commentPosted', function (data) {
+              ga('send', 'event', window.clientName, 'post', 'LiveComments');
+            });
+
+            commentsWidget.on('userLoggedIn', function (data) {
+              ga('send', 'event', window.clientName, 'login', 'LiveComments');
+            });
+
+          });
+
+        });
+
+      }());
+    </script>
+  </div>
+
+</body>
+</html>

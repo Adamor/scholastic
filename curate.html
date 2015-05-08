@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Scholastic Curate Demo</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="http://livefyre-cdn.s3.amazonaws.com/libs/sdk/v2.13.8/streamhub-sdk.min.css"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+    window.clientName = 'Scholastic';
+
+     ga('create', 'UA-53428138-1', 'auto');
+     ga('send', 'pageview', {'prospect': clientName});
+
+  </script>
+</head>
+
+<body>
+  <div class="livefyre-wrapper">
+    <nav>
+        <ul>
+            <li><a href="core.html">Comments</a></li>
+            <li><a href="curate.html">Curate</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+    </nav>
+    <div id="mediawall-wrapper">
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdn.livefyre.com/Livefyre.js"></script>
+    <script type="text/javascript">
+
+      Livefyre.require([
+        'streamhub-wall#3',
+        'streamhub-sdk#2.13.8'
+      ], function(LiveMediaWall, SDK){
+
+        var wall = new LiveMediaWall({
+            el: document.getElementById('mediawall-wrapper'),
+            collection: new (SDK.Collection)({
+                network: 'client-demo-accounts.fyre.co',
+                siteId: '370355',
+                articleId: 'custom-1421870468390'
+            })
+        });
+      });
+    </script>
+  </div>
+</body>
+</html

@@ -1,0 +1,94 @@
+html{
+	font-size: 10px;
+}
+
+body {
+    background: #fafafa;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 62.5%;
+}
+
+.livefyre-wrapper {
+    margin: 50px auto 0 auto;
+    width: 960px;
+}
+
+h1{
+	font-size: 5em;
+}
+
+nav{
+	height: 26px;
+	position: relative;
+	left: 20%;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 1px 0;
+}
+
+nav ul li{
+	display: inline;
+	float: left;
+	font-size: 2.4em;
+	width: 20%;
+}
+
+nav ul li a{
+	background: #797979;
+	color: #fff;
+	display: block;
+	height: 24px;
+	line-height: 24px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+nav ul li a:hover{
+	background: #333;
+	color: #ccc;
+}
+
+nav ul li a.active{
+	background: #fafafa;
+	color: #5e5f5f;
+}
+
+.goog-ratings-star{
+	background-image: url(../img/book-rating-sprite.png) !important;
+  background-position: 0px -23px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  height: 28px;
+  padding: 0;
+  width: 28px;
+}
+
+.fyre-reviews .fyre-editor-ratings .goog-ratings-firststar-on, .fyre-reviews .fyre-editor-ratings .goog-ratings-midstar-on, 
+.fyre-reviews .fyre-editor-ratings .goog-ratings-laststar-on{
+	background-position: 1px -34px !important;
+}
+
+.fyre-rating-half-even{ 
+	background-position: -13px 3px !important;
+}
+
+.fyre-rating-half-odd{
+	background-position: 1px 3px !important;
+}
+
+.livefyre-wrapper .fyre-reviews .fyre-editor-ratings.fyre-rating-half .goog-ratings-star.goog-ratings-midstar-on.fyre-rating-half-even, 
+.livefyre-wrapper .fyre-reviews .fyre-editor-ratings.fyre-rating-half .goog-ratings-star.goog-ratings-laststar-on.fyre-rating-half-even{
+	background-position: -13px -34px !important;
+}
+
+.livefyre-wrapper .fyre-reviews .fyre-editor-ratings.fyre-rating-half .goog-ratings-star.goog-ratings-midstar-on.fyre-rating-half-odd, 
+.livefyre-wrapper .fyre-reviews .fyre-editor-ratings.fyre-rating-half .goog-ratings-star.goog-ratings-laststar-on.fyre-rating-half-odd{
+	background-position: 1px -34px !important;
+}
+

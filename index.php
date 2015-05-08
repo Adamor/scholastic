@@ -31,13 +31,13 @@
 
 <body>
   <div class="livefyre-wrapper">
-    <nav>
+    <!-- <nav>
         <ul>
             <li><a href="core.html">Comments</a></li>
             <li><a href="curate.html">Curate</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="index.php">Reviews</a></li>
         </ul>
-    </nav>
+    </nav> -->
     <div id="product">
       <h1>Relive the wonder with the Harry Potter Box Set</h1>
       <img src="img/hpboxset.png"/>
